@@ -639,6 +639,7 @@ Main information section
 .img-container {
     text-align: center;
     padding: 1rem;
+    margin: 1rem;
 }
 
 .img-wrapper {
