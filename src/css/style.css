@@ -58,6 +58,19 @@ a {
     color: inherit;
 }
 
+blockquote {
+    margin: 1rem auto;
+    padding-bottom: 3rem;
+    color: #31708f;
+    font-size: 0.8rem;
+    border-left: 0.75rem solid #d9edf7;
+}
+
+blockquote p {
+    float: left;
+    padding: 0.5rem;
+}
+
 .container {
     max-width: 1100px;
     margin: auto;
@@ -74,6 +87,10 @@ a {
 
 .oblique {
     font-style: oblique;
+}
+
+.highlight {
+    font-size: 1.5rem
 }
 
 .active {
@@ -610,6 +627,27 @@ Main information section
 .content {
     overflow: hidden;
     height: 0;
+    -ms-overflow-style: none;  // IE 10+
+    overflow: -moz-scrollbars-none;  // Firefox
+}
+
+
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+.img-container {
+    text-align: center;
+    padding: 1rem;
+}
+
+.img-wrapper {
+    max-width: 600px;
+    margin: auto;
+}
+
+.online-book img {
+    width: 100%;
 }
 
 
