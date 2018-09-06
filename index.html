@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>PassMyExam</title>
+      <link rel="icon" href="resources\images\..." type="image/icon">
+      <!-- Reset -->
+      <link rel="stylesheet" href="./src/css/reset.css" type="text/css">
+      <!-- Custom stylesheet -->
+      <link rel="stylesheet" href="./src/css/style.css" type="text/css">
+    </head>
+
+    <body>
+
+        <!-- Header Section -->
+        <div id="navigation">
+            <div class="button">
+                <img src="src/img/burgermenu.png">
+            </div>
+            <div class="nav-container container">
+                <header>
+                    <div class="logo">
+                        <a href="#"><img src="src/img/logo.png" alt="logo"></a>
+                    </div>
+
+                </header>
+                <nav>
+                    <ul class="nav-ul hide-ul">
+                        <li class="active"><a href="#">Practice</a></li>
+                        <li><a href="./src/pages/resources.html">Resources</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Navbar wedge -->
+        <div class="wedge"></div>
+
+        <!-- Main Content -->
+
+        <!-- Quiz button section -->
+        <div id="welcome">
+            <div class="container">
+                <h1>Welcome!</h1>
+                <h3>
+                    Test your knowledge by completing the quizzes.
+                    If you consistently score more then 90% on all
+                    quizzes you will have a very good chance for
+                    passing your Life In The UK Exam
+                </h3>
+                <hr>
+                <h3>
+                    Select a quiz and test your knowledge
+                </h3>
+                <div class="quiz-list">
+                    <ul>
+                        <li><button class="btn" id="btn-1">Exam 1</button></li>
+                        <li><button class="btn" id="btn-2">Exam 2</button></li>
+                        <li><button class="btn" id="btn-3">Exam 3</button></li>
+                        <li><button class="btn" id="btn-4">Exam 4</button></li>
+                        <li><button class="btn" id="btn-5">Exam 5</button></li>
+                        <li><button class="btn" id="btn-6">Exam 6</button></li>
+                        <li><button class="btn" id="btn-7">Exam 7</button></li>
+                        <li><button class="btn" id="btn-8">Exam 8</button></li>
+                        <li><button class="btn" id="btn-9">Exam 9</button></li>
+                        <li><button class="btn" id="btn-10">Exam 10</button></li>
+                        <li><button class="btn" id="btn-11">Exam 11</button></li>
+                        <li><button class="btn" id="btn-12">Exam 12</button></li>
+                        <li><button class="btn" id="btn-13">Exam 13</button></li>
+                        <li><button class="btn" id="btn-14">Exam 14</button></li>
+                        <li><button class="btn" id="btn-15">Exam 15</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz section -->
+
+        <div id="quiz">
+            <div class="close">
+                <span id="close">EXIT</span>
+            </div>
+
+            <div class="container quiz-container">
+
+                <!-- Finished quiz layout -->
+                <div id="finished">
+                    <div id="final-score"></div>
+                    <button class="submit-btn" id="finished-btn">Finish Quiz</button>
+                </div>
+
+                <!-- Quiz layout -->
+                <div id="quiz-layout">
+                    <div class="quiz-info">
+                        <div id="quiz-name">Exam</div>
+                        <div id="quiz-count"></div>
+                        <div id="correct-count" class="green"></div>
+                        <div id="count-down"></div>
+                    </div>
+
+                    <hr>
+
+                    <div class="question" id="question">
+                        Question placeholder ...?
+                    </div>
+
+                    <div id="answers">
+                        <div class="answer" id="answer1">
+                            <label>
+                                <input type="checkbox" value="">
+                                <span id="a1">placeholder...1</span>
+                            </label>
+                        </div>
+
+                        <div class="answer" id="answer2">
+                            <label>
+                                <input type="checkbox" value="">
+                                <span id="a2">placeholder...2</span>
+                            </label>
+                        </div>
+
+                        <div class="answer" id="answer3">
+                            <label>
+                                <input type="checkbox" value="">
+                                <span id="a3">placeholder...3</span>
+                            </label>
+                        </div>
+
+                        <div class="answer" id="answer4">
+                            <label id="">
+                                <input type="checkbox" value="">
+                                <span id="a4">placeholder...4</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="info" id="info">
+
+                    </div>
+                    <button class="submit-btn show" id="submit-btn"  type="submit">Check answer</button>
+                    <button class="submit-btn hide" id="submit-btn-next" type="submit">Continue <span class="arrow">>></span> </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+
+        <footer></footer>
+        <script src="./src/js/main.js"></script>
+        <script src="./src/js/navigation.js"></script>
+    </body>
+</html>
