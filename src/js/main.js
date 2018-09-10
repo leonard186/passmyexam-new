@@ -2680,7 +2680,7 @@ var quiz11 = [
     new Quiz(
         'Which country was invaded by Germany in 1939 and resulted in starting the Second World War?',
         'Poland',
-        'Danemark',
+        'Denmark',
         'Netherlands',
         'Britain',
         [1, 0, 0, 0],
@@ -3501,7 +3501,7 @@ var quiz15 = [
     //Question 9
     new Quiz(
         'During the reign of Elizabeth I, a large fleet of ships was sent to England to conquer the country and to restore Catholicism, where did this fleet come from?',
-        'Danemark',
+        'Denmark',
         'Germany',
         'France',
         'Spain',
