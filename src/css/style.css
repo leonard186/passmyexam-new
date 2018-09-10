@@ -43,6 +43,30 @@ font-family: 'Roboto', sans-serif;
 **********************************/
 
 /**********************************************************************
+Keyframes
+**********************************************************************/
+
+@keyframes arrowmotion {
+    from {
+        padding-left: 0;
+    }
+
+    to {
+        padding-left: 0.8rem;
+    }
+}
+
+@keyframes fadeOut {
+    0% { width: 100%; opacity: 1; }
+    100% { width: 0; opacity: 0; }
+}
+
+@keyframes fadeIn {
+    0% { height: 0; opacity: 0; }
+    100% { height: 100%; opacity: 1; }
+}
+
+/**********************************************************************
 Global styling
 **********************************************************************/
 html {
@@ -82,7 +106,7 @@ blockquote p {
 }
 
 .bold {
-    font-weight: bold;
+    font-weight: bold !important;
 }
 
 .oblique {
@@ -131,11 +155,6 @@ blockquote p {
 .invalid {
     color: #721C24 !important;
     background-color: #F8D7DA !important;
-}
-
-@keyframes fadeIn {
-    0% { height: 0; opacity: 0; }
-    100% { height: 100%; opacity: 1; }
 }
 
 .alert, .success {
@@ -504,17 +523,6 @@ Quiz section
     letter-spacing: -0.05rem;
 }
 
-/* create motion effect for continue button */
-@keyframes arrowmotion {
-    from {
-        padding-left: 0;
-    }
-
-    to {
-        padding-left: 0.8rem;
-    }
-}
-
 .arrow {
     animation-duration: 0.8s;
     animation-name: arrowmotion;
@@ -531,52 +539,131 @@ Quiz section
 Resources Page
 **********************************************************************/
 
+.chapter-title {
+    font-size: 1.1rem;
+}
+
+.container-md {
+}
+
+/**********************************************************************
+Content list section
+**********************************************************************/
+
+.content-list hr {
+    margin: 1rem;
+}
+
+.content-list {
+    width: 0;
+    color: #004085;
+    background: #cce5ff;
+    padding-top: 3rem;
+    height: 100%;
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    opacity: 0.95;
+    cursor: pointer;
+}
+
+#bookmark {
+    position: fixed;
+    top: 1rem;
+    left: 0;
+    cursor: pointer;
+}
+
+#bookmark img {
+    width: 1.7rem;
+}
+
+#close-list {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    transition: 0.5s;
+}
+
+#close-list:hover {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.inner-content-list {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding-right: 17px;
+}
+
+.content-list-sections {
+    padding: 0 1rem;
+    min-width: 18rem;
+}
+
+.content-list ul{
+    padding: 1rem;
+}
+
+.content-list li{
+    padding: 0.2rem 0;
+}
+
+@media screen and (max-height: 450px) {
+    .content-list {padding-top: 1px;}
+}
 
 /**********************************************************************
 Main information section
 **********************************************************************/
+.page-content {
+    margin: 1.5rem;
 
-#main-information .container-md {
-    padding: 1.5rem;
 }
 
-#main-information li {
+.page-content li {
     list-style-type: square;
     padding: 0.5rem 0;
 }
 
-#main-information ul {
+.page-content ul {
     padding: 0 0 0 2rem;
 }
 
-#main-information h1 {
+.page-content h1 {
     padding: 2rem 0;
 }
 
-#main-information h3, #main-information p {
+.page-content h3, .page-content p {
     padding: 1rem 0;
 }
 
-#main-information h4 {
+.page-content h4 {
     padding-top: 1.35rem;
 }
 
-#main-information a {
+.page-content a {
     background: #7EB3FF;
-    color: #24345C;
+    color: #ffffff;
     cursor: pointer;
     text-decoration: none;
     transition: ease-in 0.3s;
     border-radius: 0.2rem;
-    padding: 0.1rem 0.1rem;
+    padding: 0 0.1rem;
 
 }
 
-#main-information a:hover {
-    color: #F2F2F2;
+.page-content a:hover {
+    color: #24345C;
 }
 
-#main-information hr {
+.page-content hr {
     margin: 3rem 0;
 }
 
@@ -589,7 +676,6 @@ Main information section
     font-weight: normal;
     cursor: pointer;
     scroll-behavior: smooth;
-    overflow-y: scroll;
     border-left: 1.5rem solid #004085;
     padding: 2rem 0.8rem;
 }
@@ -597,13 +683,6 @@ Main information section
 .content {
     overflow: hidden;
     height: 0;
-    -ms-overflow-style: none;  // IE 10+
-    overflow: -moz-scrollbars-none;  // Firefox
-}
-
-
-.content::-webkit-scrollbar {
-    display: none;
 }
 
 .img-container {
@@ -636,5 +715,8 @@ td, th {
 tr:nth-child(even) {
     background-color: #dff0d8;
 }
+
+
+
 
 
