@@ -9,99 +9,67 @@ var get = function(x){
 var dom = {
     content: document.querySelectorAll(".online-book .content"),
     chapterH: document.querySelectorAll(".online-book .chapter-head"),
-    bookmark: document.getElementById('bookmark'),
+    infoH: document.querySelectorAll('.information-section h2'),
+    bookmark: document.getElementById("bookmark"),
     contentList: document.querySelector('.content-list'),
-    ch1H: document.getElementById('chapter1-head'),
-    ch1C: document.getElementById('chapter1-content'),
-    ch1A: document.getElementById('chapter1-anchor'),
-    ch2H: document.getElementById('chapter2-head'),
-    ch2C: document.getElementById('chapter2-content'),
-    ch3H: document.getElementById('chapter3-head'),
-    ch3C: document.getElementById('chapter3-content'),
-    ch4H: document.getElementById('chapter4-head'),
-    ch4C: document.getElementById('chapter4-content'),
-    ch5H: document.getElementById('chapter5-head'),
-    ch5C: document.getElementById('chapter5-content'),
-    a00: get('a-0-0'),
-    a01: get('a-0-1'),
-    a02: get('a-0-2'),
-    a03: get('a-0-3'),
-    a10: get('a-1-0'),
-    a11: get('a-1-1'),
-    a12: get('a-1-2'),
-    a13: get('a-1-3'),
-    a20: get('a-2-0'),
-    a21: get('a-2-1'),
-    a30: get('a-3-0'),
-    a31: get('a-3-1'),
-    a32: get('a-3-2'),
-    a33: get('a-3-3'),
-    a34: get('a-3-4'),
-    a35: get('a-3-5'),
-    a36: get('a-3-6'),
-    a40: get('a-4-0'),
-    a41: get('a-4-1'),
-    a42: get('a-4-2'),
-    a43: get('a-4-3'),
-    a44: get('a-4-4'),
-    a45: get('a-4-5'),
-    a46: get('a-4-6'),
-    a47: get('a-4-7'),
-    a50: get('a-4-0'),
-    a51: get('a-4-1'),
-    a52: get('a-4-2'),
-    a53: get('a-4-3'),
-    a54: get('a-4-4'),
-    a55: get('a-4-5'),
-    a56: get('a-4-6'),
-    a57: get('a-4-7'),
-    a58: get('a-4-4'),
-    a59: get('a-4-5'),
-    a510: get('a-4-6'),
-    a511: get('a-4-7'),
-    a510: get('a-4-3'),
-
-
-
+    target: document.querySelectorAll('.page-content  .target'),
+    anchor: document.querySelectorAll('.content-list .anchor'),
+    onlineBook: document.querySelectorAll(".online-book"),
+    innerListH: document.querySelectorAll(".inner-content-list h3")
 };
 
 var content = [...dom.content];
 var chapterH = [... dom.chapterH];
+var infoH = [... dom.infoH];
+var headers = infoH.concat(chapterH);
+var target= [... dom.target];
+var anchor = [... dom.anchor];
+var innerListH = [... dom.innerListH];
+console.log(headers);
+
 
 
 function toggleChapter(chapterIndex) {
+
     if(hasClass(content[chapterIndex], 'visible')){
-        content[chapterIndex].classList.toggle('visible');
+        content[chapterIndex].setAttribute('class', 'content');
+scrollSpy();
     } else {
-        content[chapterIndex].classList.toggle('visible');
+        content[chapterIndex].setAttribute('class', 'visible');
         chapterH[chapterIndex].scrollIntoView({ behavior: 'smooth', block: 'start' });
-    };
+
+    }
+
+
 }
+scrollSpy();
+    //content.forEach(e => e.setAttribute('class', 'visible'));
+
+
+
+
+function hideAll() {
+    content.forEach(e => {
+        e.setAttribute('class', ' ');
+        e.setAttribute('class', 'content');
+    });
+}
+
+
+
 
 //content list toggle
 function showContentList() {
+    //window.scrollTo(0, document.querySelector(".active").offsetTop);
     dom.contentList.style.width = '20rem';
     dom.bookmark.style.display = 'none';
-}
+    scrollSpy();
+
+};
 
 function hideContentList() {
     dom.contentList.style.width = '0';
     dom.bookmark.style.display = 'block';
-}
-
-var domElem = {
-    get: function(x){
-        return document.getElementById(x);
-    },
-
-
-    test: document.getElementById('test'),
-    btn: document.getElementById('btn')
-
-};
-
-function toggleVisibility() {
-
 };
 
 function getThere(elem) {
@@ -111,8 +79,57 @@ function getThere(elem) {
     }
 };
 
+//connect anchors with target elements
+function connectLinks() {
+    function scroll(e) {
+        if(hasClass(e.parentNode, 'content')){
+            e.parentNode.setAttribute('class', 'visible');
+        }
+        scrollSpy();
+        e.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    for(var i=0; i<anchor.length; i++) {
+        anchor[i].addEventListener('click', scroll.bind(this, target[i]), false);
+    }
+};
 
-dom.ch1A.addEventListener('click', function() {
-    getThere(document.getElementById('1-3'));
-});
+
+function scrollSpy() {
+    var targetOffset = [];
+    var targetOffset2 = [];
+
+
+    target.forEach(e => targetOffset.push(e.offsetTop));
+    headers.forEach(e => targetOffset2.push(e.offsetTop));
+    console.log(targetOffset);
+
+    /*
+        window.onscroll = function() {
+            var scrollPosition = (document.documentElement.scrollTop + 250) || (document.body.scrollTop + 250);
+            for(var i=0; i<targetOffset2.length; i++) {
+
+                if(targetOffset2[i] < scrollPosition) {
+
+                    document.querySelector('.content-list .active').setAttribute('class', ' ');
+                    innerListH[i].setAttribute('class', 'active');
+
+                }
+            }
+        };
+    */
+
+    window.onscroll = function() {
+        var scrollPosition = (document.documentElement.scrollTop + 250) || (document.body.scrollTop + 250);
+        for(var i=0; i<targetOffset.length; i++) {
+            if(targetOffset[i] < scrollPosition) {
+                document.querySelector('.content-list .active').setAttribute('class', ' ');
+                anchor[i].setAttribute('class', 'active');
+            }
+        }
+
+    }
+}
+
+connectLinks();
+
 
