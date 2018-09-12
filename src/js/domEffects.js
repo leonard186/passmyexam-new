@@ -70,6 +70,12 @@ function connectLinks() {
     }
 };
 
+function gotToTop() {
+    get('t-0-0').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+get('top').addEventListener('click', gotToTop);
+
 
 function scrollSpy() {
     var targetOffset = [];
@@ -97,5 +103,6 @@ setInterval(function () {
 }, 7000);
 
 connectLinks();
+
 
 
