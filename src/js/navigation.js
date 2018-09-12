@@ -12,10 +12,14 @@
 
 var prevScrollpos = window.pageYOffset;
 var mobile = window.matchMedia("(max-width: 720px)");
+var bookmark = document.getElementById('bookmark');
 
 
 window.onscroll = function() {
-    showBookmark();
+    if(bookmark) {
+        showBookmark();
+    }
+
     if(mobile.matches) {
         shrinkOnScrollMobile();
         return
