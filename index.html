@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>PassMyExam</title>
-      <link rel="icon" href="resources\images\..." type="image/icon">
-      <!-- Reset -->
-      <link rel="stylesheet" href="./src/css/reset.css" type="text/css">
-      <!-- Custom stylesheet -->
-      <link rel="stylesheet" href="./src/css/style.css" type="text/css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>PassMyExam</title>
+        <link rel="icon" href="resources\images\..." type="image/icon">
+        <!-- Reset -->
+        <link rel="stylesheet" href="./src/css/reset.css" type="text/css">
+        <!-- Custom stylesheet -->
+        <link rel="stylesheet" href="./src/css/style.css" type="text/css">
     </head>
 
     <body>
 
-        <!-- Header Section -->
+        <!-- Navigation Section -->
         <div id="navigation">
 
             <div class="nav-container container">
@@ -27,136 +27,119 @@
                     </div>
                 </div>
 
-                <header>
+                <div class="logo-wrap">
                     <div class="logo">
                         <a href="#"><img src="src/img/logo.png" alt="logo"></a>
                     </div>
-                </header>
+                </div>
 
                 <nav>
                     <ul class="nav-ul hide-ul">
-                        <li class="active"><a href="#">Practice</a></li>
+                        <li class="active"><a href="./src/pages/practice.html">Practice</a></li>
                         <li><a href="./src/pages/resources.html">Resources</a></li>
-                        <li><a href="#">About Us</a></li>
+                        <li><a href="./src/pages/about.html">About Us</a></li>
                     </ul>
                 </nav>
 
             </div>
         </div>
 
-        <!-- Main Content -->
+        <!-- Header section -->
 
-        <!-- Quiz button section -->
-        <div id="welcome">
+        <header>
+            <div class="overlay"></div>
+            <div class="header-wrap">
+                <h1>Welcome to passmyexam.co.uk</h1>
+                <h3>Learn and Practice with us so you can Pass your official Life in the UK exam!</h3>
+            </div>
+        </header>
+
+        <!-- Content presentation section -->
+
+        <section class="content-presentation">
             <div class="container">
-                <h1>Welcome!</h1>
-                <h3>
-                    Test your knowledge by completing the quizzes.
-                    If you consistently score more then 90% on all
-                    quizzes you will have a very good chance for
-                    passing your Life In The UK Exam
-                </h3>
-                <hr>
-                <h3>
-                    Select a quiz and test your knowledge
-                </h3>
-                <div class="quiz-list">
-                    <ul>
-                        <li><button class="btn" id="btn-1">Exam 1</button></li>
-                        <li><button class="btn" id="btn-2">Exam 2</button></li>
-                        <li><button class="btn" id="btn-3">Exam 3</button></li>
-                        <li><button class="btn" id="btn-4">Exam 4</button></li>
-                        <li><button class="btn" id="btn-5">Exam 5</button></li>
-                        <li><button class="btn" id="btn-6">Exam 6</button></li>
-                        <li><button class="btn" id="btn-7">Exam 7</button></li>
-                        <li><button class="btn" id="btn-8">Exam 8</button></li>
-                        <li><button class="btn" id="btn-9">Exam 9</button></li>
-                        <li><button class="btn" id="btn-10">Exam 10</button></li>
-                        <li><button class="btn" id="btn-11">Exam 11</button></li>
-                        <li><button class="btn" id="btn-12">Exam 12</button></li>
-                        <li><button class="btn" id="btn-13">Exam 13</button></li>
-                        <li><button class="btn" id="btn-14">Exam 14</button></li>
-                        <li><button class="btn" id="btn-15">Exam 15</button></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+                <div class="study content-elem">
 
-        <!-- Quiz section -->
+                    <div class="content-elem-img">
+                        <a href="./src/pages/resources.html"><img src="./src/img/book.svg"></a>
+                    </div>
 
-        <div id="quiz">
-            <div class="close">
-                <span id="close">EXIT</span>
-            </div>
+                    <div class="content-elem-text">
+                        <h2>Study from our online book</h2>
+                        <p>
+                            Check out our resources page! You have free access to the online version of the official
+                            handbook and many other useful information.
+                        </p>
+                        <p>
+                            With the interactive study guide and easy
+                            navigation through the book you'll find it easy to learn.
+                        </p>
+                    </div>
 
-            <div class="container quiz-container">
-
-                <!-- Finished quiz layout -->
-                <div id="finished">
-                    <div id="final-score"></div>
-                    <button class="submit-btn" id="finished-btn">Finish Quiz</button>
                 </div>
 
-                <!-- Quiz layout -->
-                <div id="quiz-layout">
-                    <div class="quiz-info">
-                        <div id="quiz-name">Exam</div>
-                        <div id="quiz-count"></div>
-                        <div id="correct-count" class="green"></div>
-                        <div id="count-down"></div>
+                <div class="practice content-elem">
+
+                    <div class="content-elem-img">
+                        <a href="./src/pages/practice.html"><img src="./src/img/student.svg"></a>
                     </div>
 
-                    <hr>
-
-                    <div class="question" id="question">
-                        Question placeholder ...?
+                    <div class="content-elem-text">
+                        <h2>Get ready to practice</h2>
+                        <p>
+                            All questions in the mock exams are based on the official 3rd edition handbook ‘Life in the
+                            United Kingdom: A guide for new residents’.
+                        </p>
+                        <p>
+                            Practice makes perfect! Complete all 15 mock exam tests to be prepared and confident for
+                            the final exam.
+                        </p>
                     </div>
 
-                    <div id="answers">
-                        <div class="answer" id="answer1">
-                            <label>
-                                <input type="checkbox" value="">
-                                <span id="a1">placeholder...1</span>
-                            </label>
-                        </div>
+                </div>
 
-                        <div class="answer" id="answer2">
-                            <label>
-                                <input type="checkbox" value="">
-                                <span id="a2">placeholder...2</span>
-                            </label>
-                        </div>
+                <div class="email content-elem">
 
-                        <div class="answer" id="answer3">
-                            <label>
-                                <input type="checkbox" value="">
-                                <span id="a3">placeholder...3</span>
-                            </label>
-                        </div>
-
-                        <div class="answer" id="answer4">
-                            <label id="">
-                                <input type="checkbox" value="">
-                                <span id="a4">placeholder...4</span>
-                            </label>
-                        </div>
+                    <div class="content-elem-img">
+                        <a href="./src/pages/about.html#contact"><img src="./src/img/email.svg"></a>
                     </div>
 
-                    <hr>
-
-                    <div class="info" id="info">
-
+                    <div class="content-elem-text">
+                        <h2>Share your experience</h2>
+                        <p>
+                            Join the discussions on the <a href="./src/pages/practice.html#facebook">facebook
+                            comments</a> section and speak to other candidates.
+                        </p>
+                        <p>
+                            Have you passed your test already? Share your experience on our facebook page or <a
+                                href="./src/pages/about#contact">send us
+                            a message</a>.
+                        </p>
                     </div>
-                    <button class="submit-btn show" id="submit-btn"  type="submit">Check answer</button>
-                    <button class="submit-btn hide" id="submit-btn-next" type="submit">Continue <span class="arrow">>></span> </button>
+
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- Footer Section -->
 
-        <footer></footer>
-        <script src="./src/js/main.js"></script>
+        <footer>
+            <div class="footer">
+                <div class="footer-information">
+                    <a href="./src/pages/terms.html">Terms and conditions</a>
+                    <p>Contact us at <a href="mailto:contact@passmyexam.co.uk"
+                                        title="send an email to contact@passmyexam.co.uk">contact@passmyexam.co.uk</a></p>
+                    <a href="./src/pages/about.html#contact">Contribute content</a>
+                </div>
+
+                <div class="small">
+                    <div>Icons made by <a href="https://www.flaticon.com/authors/popcorns-arts" title="Book">Book</a> from <a href="https://www.flaticon.com/"     title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"     title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+                    <div>Icons made by <a href="https://www.flaticon.com/authors/popcorns-arts" title="Email">Email</a> from <a href="https://www.flaticon.com/"     title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"     title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+                    <div>Icons made by <a href="https://www.flaticon.com/authors/popcorns-arts" title="Student">Student</a> from <a href="https://www.flaticon.com/"     title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"     title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+                </div>
+
+            </div>
+        </footer>
         <script src="./src/js/navigation.js"></script>
     </body>
 </html>
