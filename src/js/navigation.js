@@ -1,3 +1,5 @@
+
+//nagivation menu toggle
 (function () {
 
     var navButton = document.querySelector(".button");
@@ -10,26 +12,30 @@
     navButton.onclick = toggleMobileView;
 }());
 
+//dom elements and global variables
 var prevScrollpos = window.pageYOffset;
 var mobile = window.matchMedia("(max-width: 720px)");
 var bookmark = document.getElementById('bookmark');
+var topArrow = document.querySelector('.up');
+var downArrow = document.querySelector('.down');
 
-
+//action to take when window is scrolled
 window.onscroll = function() {
-    if(bookmark) {
-        showBookmark();
+//show / hide navigation arrows and bookmard
+    if(bookmark || topArrow || downArrow) {
+        showArrows();
     }
-
+//show hide navbar for mobile view
     if(mobile.matches) {
         shrinkOnScrollMobile();
-        return
+//show hide navbar for desktop view
     } else {
         shrinkOnScrollDesktop();
-        return
+
     }
 };
 
-
+//show/hide navbar on mobile
 function shrinkOnScrollMobile() {
     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
         document.querySelector('.logo-onshrink img').style.display = 'block';
@@ -50,7 +56,7 @@ function shrinkOnScrollMobile() {
         document.querySelector('.logo').style.display = 'block';
     }
 }
-
+//show/hide navbar on desktop
 function shrinkOnScrollDesktop() {
     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
         document.querySelector('.logo-onshrink img').style.display = 'block';
@@ -72,11 +78,18 @@ function shrinkOnScrollDesktop() {
         document.querySelector('.logo').style.display = 'block';
     }
 }
-
-function showBookmark() {
-    if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
-    document.getElementById('bookmark').style.left = '0';
-    } else {
-        document.getElementById('bookmark').style.left = '-5rem';
+//show/hide navigation arrows and bookmark
+function showArrows() {
+    if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            bookmark.style.opacity = '1';
+            topArrow.style.opacity = '1';
+            downArrow.style.opacity = '1';
+        } else {
+            bookmark.style.opacity = '0';
+            topArrow.style.opacity = '0';
+            downArrow.style.opacity = '0';
+        }
     }
 }

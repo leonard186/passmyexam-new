@@ -43,13 +43,16 @@
         </div>
 
         <!-- Main information -->
-        <div id="main-information">
+        <div class="main-information">
 
             <div class="container-md">
 
                 <div id="bookmark" onclick="showContentList()">
                     <img src="../img/bookmark.png">
                 </div>
+
+                <div class="jump-arrow up"><img src="../img/up.png"></div>
+                <div class="jump-arrow down"><img src="../img/down.png"></div>
 
                 <!-- Content list section -->
 
@@ -228,20 +231,32 @@
 
                         <p>
                             Our online version of the official handbook - <span class="bold">Life in the United Kingdom: A guide for new residents</span>
-                            contains all the information that you need to pass the official life in the UK test.
+                            contains all the information you need to pass the official life in the UK test.
                             You must read and understand the contents of this book in order to prepare for the test.
                             It requires an understanding of the English language at English for Speakers of Other Languages (ESOL) Entry Level 3
                             to read and understand the material. </p>
 
+                        <div class="button-href">
+                            <a  href="./chapter/chapter1.html">Go to online book</a>
+                        </div>
+
+                        <h3>
+                            OR <br><br> You can preview the chapters below &DownArrowBar;
+                        </h3>
+
                 </div>
+
                     <!-- Online book section -->
 
                     <!-- Chapter 1 -->
 
                     <div id="chapter1" class="online-book" >
 
-                        <div class="chapter-head"onclick="toggleChapter(0)">
-                            <h2><span class="bold">Chapter 1:</span><br><span class="chapter-title">The Values and principles of the UK</span></h2>
+                        <div class="chapter-head">
+                            <h2 onclick="toggleChapter(0)"><span class="bold">Chapter 1:</span><br><span
+                                    class="chapter-title">The Values and principles of the UK</span></h2>
+                            <div class="new-tab" onclick="window.open('./chapter/chapter1.html', '_blank');">open in new tab
+                                &nearr; </div>
                         </div>
 
                         <div class="content" id="chapter1-content">
@@ -478,8 +493,14 @@
 
                     <div id="chapter2" class="online-book">
 
-                        <div class="chapter-head" onclick="toggleChapter(1)">
-                            <h2><span class="bold">Chapter 2:</span><br><span class="chapter-title">What is the UK?</span></h2>
+                        <div class="chapter-head">
+                            <h2  onclick="toggleChapter(1)" ><span class="bold">Chapter 2:</span><br><span
+                                    class="chapter-title">What is the
+                                UK?</span></h2>
+
+                            <div class="new-tab" onclick="window.open('./chapter/chapter2.html', '_blank');">open in new tab
+                                &nearr; </div>
+
                         </div>
 
                         <div class="content">
@@ -531,8 +552,12 @@
 
                     <div id="chapter3" class="online-book">
 
-                        <div class="chapter-head" onclick="toggleChapter(2)">
-                            <h2><span class="bold">Chapter 3:</span><br><span class="chapter-title">A Long and Illustrious History</span></h2>
+                        <div class="chapter-head">
+                            <h2 onclick="toggleChapter(2)"><span class="bold">Chapter 3:</span><br><span class="chapter-title">A Long and Illustrious History</span></h2>
+
+                            <div class="new-tab" onclick="window.open('./chapter/chapter2.html', '_blank');">open in new tab
+                                &nearr; </div>
+
                         </div>
 
                         <div class="content">
@@ -2369,8 +2394,12 @@
 
                     <div id="chapter4" class="online-book">
 
-                        <div class="chapter-head" onclick="toggleChapter(3)">
-                            <h2><span class="bold">Chapter 4:</span><br><span class="chapter-title">A Modern, Thriving Society</span></h2>
+                        <div class="chapter-head">
+                            <h2 onclick="toggleChapter(3)"><span class="bold">Chapter 4:</span><br><span class="chapter-title">A Modern, Thriving Society</span></h2>
+
+                            <div class="new-tab" onclick="window.open('./chapter/chapter2.html', '_blank');">open in new tab
+                                &nearr; </div>
+
                         </div>
 
                         <div class="content">
@@ -3967,8 +3996,12 @@
 
                     <div id="chapter5" class="online-book">
 
-                        <div class="chapter-head" onclick="toggleChapter(4)">
-                            <h2><span class="bold">Chapter 5:</span><br><span class="chapter-title">The UK Government, the Law and Your Role</span></h2>
+                        <div class="chapter-head">
+                            <h2 onclick="toggleChapter(4)"><span class="bold">Chapter 5:</span><br><span class="chapter-title">The UK Government, the Law and Your Role</span></h2>
+
+                            <div class="new-tab" onclick="window.open('./chapter/chapter2.html', '_blank');">open in new tab
+                                &nearr; </div>
+
                         </div>
 
                         <div class="content">
@@ -5964,6 +5997,7 @@
 
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
