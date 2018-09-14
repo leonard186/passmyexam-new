@@ -945,7 +945,7 @@ Content list section
     padding: 0.2rem 0;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-height: 450px) {
     .content-list {padding-top: 1px;}
 }
 
@@ -1116,7 +1116,7 @@ tr:nth-child(even) {
     border-radius: 0.2rem;
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 400px) {
     .chapter-number {
        font-size: 0.6rem;
     }
