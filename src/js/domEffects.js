@@ -88,33 +88,35 @@ function showContentList() {
     arrow[0].style.display = 'none';
     arrow[1].style.display = 'none';
 
-    switch(window.location.pathname) {
-
-        case "/passmyexam/src/pages/chapter/chapter1.html" :
+        if(window.location.pathname.includes('chapter1')) {
             scrollSpy(targetChapter1, anchorChapter1);
             get('a-1-0').scrollIntoView();
-            break;
-
-        case "/passmyexam/src/pages/chapter/chapter2.html" :
+            return;
+        }
+        if(window.location.pathname.includes('chapter2')) {
             scrollSpy(targetChapter2, anchorChapter2);
             get('a-2-0').scrollIntoView();
-            break;
+            return;
+        }
 
-        case "/passmyexam/src/pages/chapter/chapter3.html" :
+
+        if(window.location.pathname.includes('chapter3')) {
             scrollSpy(targetChapter3, anchorChapter3);
             get('a-3-0').scrollIntoView();
-            break;
+            return;
+        }
 
-        case "/passmyexam/src/pages/chapter/chapter4.html" :
+        if(window.location.pathname.includes('chapter4')) {
             scrollSpy(targetChapter4, anchorChapter4);
             get('a-4-0').scrollIntoView();
-            break;
+            return;
+        }
 
-        case "/passmyexam/src/pages/chapter/chapter5.html" :
+        if(window.location.pathname.includes('chapter5')) {
             scrollSpy(targetChapter5, anchorChapter5);
             get('a-5-0').scrollIntoView();
-            break;
-    }
+            return;
+        }
 
 };
 
