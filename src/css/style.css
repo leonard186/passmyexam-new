@@ -121,6 +121,12 @@ blockquote p {
     background-color: #F2F2F2 !important;
 }
 
+.active-large {
+    transform: scale(1.1);
+    font-weight: bold;
+    border-right: 0.2rem solid #004085;
+}
+
 .show {
     display: block;
 }
@@ -169,9 +175,20 @@ blockquote p {
     color: #856404;
 }
 
-.success {
+.form-alert {
+    padding: 0.4rem;
+    margin-bottom: 1rem;
+    border-radius: 0.2rem;
+}
+
+.form-alert-success {
     background-color: #D4EDDA;
     color: #155724;
+}
+
+.form-alert-warning {
+    background-color: #FFF3CD;
+    color: #856404;
 }
 
 .informative, .note {
@@ -200,7 +217,7 @@ hr {
 
 .jump-arrow {
     position: fixed;
-    width: 2rem;
+    width: 1.25rem;
     left: 0;
     z-index: 1;
     opacity: 0;
@@ -217,12 +234,12 @@ hr {
 
 .up {
     top: 55%;
-    left: -2px;
+    left: 2px;
 }
 
 .down {
     top: 75%;
-    left: -4px;
+    left: 2px;
 }
 
 .button-href{
@@ -470,7 +487,6 @@ header {
     padding-top: 200px;
     height: 60rem;
     display:flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #343a40;
@@ -491,12 +507,12 @@ header {
     z-index: 1;
     font-size: 25px;
     text-align: center;
-    height: 100%;
+    padding: 0 2rem;
     width: 100%;
+    background-color: rgba(33, 150, 243, 0.4);
 }
 
 .header-wrap h1, .header-wrap h3 {
-    background-color: rgba(33, 150, 243, 0.13);
     width: 100%;
 }
 
@@ -548,7 +564,7 @@ header {
 }
 
 .content-elem-img img:hover {
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    shadow: 0 5px 15px rgba(0,0,0,0.3);
     transform: scale(1.1);
 }
 
@@ -577,9 +593,6 @@ header {
         font-size: 20px;
     }
 
-    header {
-        height: 30rem;
-    }
 }
 
 @media only screen and (max-width: 720px) {
@@ -608,7 +621,7 @@ header {
     }
 
     header {
-        height: 20rem;
+        height: 25rem;
     }
 }
 
@@ -839,7 +852,7 @@ Resources Page
 **********************************************************************/
 
 .chapter-title {
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .main-information {
@@ -870,25 +883,33 @@ Content list section
     cursor: pointer;
 }
 
-.content-list-sections:last-of-type {
-    padding-bottom: 3rem;
+@keyframes tease {
+    0% {transform: scale(1)}
+    10% {transform: scale(1.4)}
+    30% {transform: scale(1)}
+    40% {left: 2px}
+    70% {left: 6px}
+    100% {left: 2px}
 }
 
 #bookmark {
     position: fixed;
     top: 65%;
-    left: -1.5px;
+    left: 2px;
     cursor: pointer;
     opacity: 0;
-    transition: opacity 2s;
+    transition: opacity 1s;
+    width: 1.25rem;
+    transform: scale(1);
+    z-index: 1;
 }
 
-#bookmark[data-animation="semirotate"] {
-    animation: semirotate 2s linear;
+#bookmark[data-animation="tease"] {
+    animation: tease 2s;
 }
 
 #bookmark img {
-    width: 1.7rem;
+    width: 100%
 }
 
 .content-list-nav {
@@ -907,11 +928,6 @@ Content list section
     font-weight: bold;
     color: #721c24;
     display: inherit;
-}
-
-#uparrow {
-    animation: semirotate 10s linear infinite;
-    padding-left: 0.3rem;
 }
 
 #close-list {
@@ -933,8 +949,12 @@ Content list section
 }
 
 .content-list-sections {
-    padding: 0 1rem;
+    padding: 1rem 1rem;
     min-width: 18rem;
+}
+
+.content-list-sections:last-of-type {
+    padding-bottom: 3rem;
 }
 
 .content-list ul{
@@ -1004,12 +1024,11 @@ Main information section
     background-color: #7EB3FF;
     width: auto;
     margin: 2rem auto;
-    font-size: 1.2rem;
     font-weight: normal;
     cursor: pointer;
     scroll-behavior: smooth;
     border-left: 1.5rem solid #004085;
-    padding: 2rem 0.8rem;
+    padding: 1rem 0.8rem;
     border-radius: 0.8rem;
 }
 
@@ -1092,14 +1111,25 @@ tr:nth-child(even) {
 }
 
 .anchor:hover, .anchor:active {
-    transition: ease-in 0.5s;
-    background-color: #F2F2F2
+    transform: scale(1.05);
+    font-weight: bold;
+    border-right: 0.2rem solid #004085;
 }
 
 .pagination {
     display: flex;
     justify-content: center;
     margin-bottom: 4rem;
+}
+
+.book-title {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.book-title p {
+    padding: 1rem 0;
+    margin: 1rem 0;
 }
 
 .chapter-number {
@@ -1167,7 +1197,7 @@ about-us section
     margin-bottom: 0.5rem;
 }
 
-.about-us-form input[type=text], .about-us-form textarea {
+.about-us-form input[type=text], .about-us-form input[type=email], .about-us-form textarea {
     display: block;
     max-width: 100%;
     padding: .5rem .75rem;
@@ -1179,11 +1209,11 @@ about-us section
     border-radius: .25rem;
 }
 
-.form-name, .form-email {
+#name, #email {
     height: 2rem;
     border-radius: 0.3rem;
 }
-
+s
 .small {
     font-size: 0.8rem;
     font-style: oblique;

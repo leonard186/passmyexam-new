@@ -87,6 +87,35 @@ function showContentList() {
     dom.bookmark.style.display = 'none';
     arrow[0].style.display = 'none';
     arrow[1].style.display = 'none';
+
+    switch(window.location.pathname) {
+
+        case "/passmyexam/src/pages/chapter/chapter1.html" :
+            scrollSpy(targetChapter1, anchorChapter1);
+            get('a-1-0').scrollIntoView();
+            break;
+
+        case "/passmyexam/src/pages/chapter/chapter2.html" :
+            scrollSpy(targetChapter2, anchorChapter2);
+            get('a-2-0').scrollIntoView();
+            break;
+
+        case "/passmyexam/src/pages/chapter/chapter3.html" :
+            scrollSpy(targetChapter3, anchorChapter3);
+            get('a-3-0').scrollIntoView();
+            break;
+
+        case "/passmyexam/src/pages/chapter/chapter4.html" :
+            scrollSpy(targetChapter4, anchorChapter4);
+            get('a-4-0').scrollIntoView();
+            break;
+
+        case "/passmyexam/src/pages/chapter/chapter5.html" :
+            scrollSpy(targetChapter5, anchorChapter5);
+            get('a-5-0').scrollIntoView();
+            break;
+    }
+
 };
 
 function hideContentList() {
@@ -116,7 +145,7 @@ function gotToTop() {
     var gotToTop = window.setInterval(function() {
         var pos = window.pageYOffset;
         if ( pos > 0 ) {
-            window.scrollTo( 0, pos - 80 ); // how far to scroll on each step
+            window.scrollTo( 0, pos - 120 ); // how far to scroll on each step
         } else {
             window.clearInterval(gotToTop);
         }
@@ -144,28 +173,31 @@ function goToBottom() {
 }
 
 
-function scrollSpy() {
+function scrollSpy(targetElement, anchorElement) {
     var targetOffset = [];
 
-    target.forEach(e => targetOffset.push(e.offsetTop));
+    targetElement.forEach(e => targetOffset.push(e.offsetTop));
 
-    window.onscroll = function() {
+    function showPosition() {
         var scrollPosition = (document.documentElement.scrollTop + 250) || (document.body.scrollTop + 250);
         for(var i=0; i<targetOffset.length; i++) {
             if(targetOffset[i] < scrollPosition) {
-                document.querySelector('.content-list .active').setAttribute('class', ' ');
-                anchor[i].setAttribute('class', 'active');
+                document.querySelector('.content-list-sections .active-large').setAttribute('class', ' ');
+                anchorElement[i].setAttribute('class', 'active-large');
             }
         }
-
     }
+    showPosition();
+    window.addEventListener('scroll', showPosition);
+    window.addEventListener('scroll', showPosition);
 }
+
 
 
 //execute animation for bookmark
 var on = false;
 setInterval(function () {
-    dom.bookmark.setAttribute('data-animation', (on) ? 'semirotate' : '');
+    dom.bookmark.setAttribute('data-animation', (on) ? 'tease' : '');
     on = !on;
 }, 7000);
 

@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+
 <html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>PassMyExam</title>
-        <link rel="icon" href="resources\images\..." type="image/icon">
+        <link rel="icon" href="../img/ukflag.ico" type="image/icon">
         <!-- Reset -->
         <link rel="stylesheet" href="../css/reset.css" type="text/css">
         <!-- Custom stylesheet -->
@@ -89,34 +89,41 @@
 
                 <div class="about-us-form">
 
-                    <form>
+                    <form method="post" action="mailer.php"  id="form">
 
                         <div class="form-area">
                             <h2 id="contact">Contact us</h2>
                         </div>
 
                         <div class="form-area">
-                            <label for="form-name">Please enter your name</label>
-                            <input type="text" class="form-name" id="form-name" placeholder="name">
+                            <?php
+                                if($_GET['success'] == 1) {
+                                    echo "<div class=\"form-alert form-alert-success\" role=\"alert\">Message sent</div>";
+                                }
+
+                                if($_GET['success'] == -1) {
+                                    echo "<div class=\"form-alert form-alert-warning\" role=\"alert\">Please fill in all the fields. Thank you!</div>";
+                                }
+                            ?>
                         </div>
 
                         <div class="form-area">
-                            <label for="form-email">Please enter your email</label>
-                            <input type="text" class="form-email" id="form-email" placeholder="email">
+                            <label for="name">Please enter your name</label>
+                            <input type="text" name="name" id="name" placeholder="name" required>
+                        </div>
+                        <div class="form-area">
+                            <label for="email">Please enter your email</label>
+                            <input type="email" name="email" id="email" placeholder="email" required>
                             <div class="small">We will never share your email address with anyone</div>
                         </div>
-
                         <div class="form-area">
-                            <label for="form-textarea">Please enter your message</label>
-                            <textarea class="form-textarea" id="form-textarea" rows="12"
-                                      placeholder="message"></textarea>
+                            <label for="message">Please enter your message</label>
+                            <textarea name="message" id="message" rows="12"></textarea>
                         </div>
 
                         <div class="form-area">
                             <button type="submit" class="submit-button">Send</button>
                         </div>
-
-
 
                     </form>
 
