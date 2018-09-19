@@ -1,6 +1,5 @@
-
 //nagivation menu toggle
-(function () {
+(function() {
 
     var navButton = document.querySelector(".button");
     var navUl = document.querySelector(".nav-ul");
@@ -21,14 +20,14 @@ var downArrow = document.querySelector('.down');
 
 //action to take when window is scrolled
 window.onscroll = function() {
-//show / hide navigation arrows and bookmard
-    if(bookmark || topArrow || downArrow) {
+    //show / hide navigation arrows and bookmard
+    if (bookmark || topArrow || downArrow) {
         showArrows();
     }
-//show hide navbar for mobile view
-    if(mobile.matches) {
+    //show hide navbar for mobile view
+    if (mobile.matches) {
         shrinkOnScrollMobile();
-//show hide navbar for desktop view
+        //show hide navbar for desktop view
     } else {
         shrinkOnScrollDesktop();
 
@@ -42,7 +41,7 @@ function shrinkOnScrollMobile() {
         document.querySelector('.nav-wrap').style.display = 'flex';
         document.querySelector('.logo').style.display = 'none';
 
-        if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
             var currentScrollPos = window.pageYOffset;
             if (prevScrollpos > currentScrollPos) {
                 document.getElementById('navigation').style.top = '0';
@@ -63,7 +62,7 @@ function shrinkOnScrollDesktop() {
         document.querySelector('.logo').style.display = 'none';
         document.querySelector('.nav-wrap').style.display = 'flex';
 
-        if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
             var currentScrollPos = window.pageYOffset;
             if (prevScrollpos > currentScrollPos) {
                 document.getElementById('navigation').style.top = '0';
@@ -80,7 +79,7 @@ function shrinkOnScrollDesktop() {
 }
 //show/hide navigation arrows and bookmark
 function showArrows() {
-    if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
         var currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos) {
             bookmark.style.opacity = '1';

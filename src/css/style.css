@@ -1,7 +1,10 @@
 /**********************************************************************
 Font
 **********************************************************************/
+
+
 /* latin */
+
 @font-face {
     font-family: 'Junge';
     font-style: normal;
@@ -10,7 +13,9 @@ Font
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+
 /* latin */
+
 @font-face {
     font-family: 'Roboto';
     font-style: italic;
@@ -19,7 +24,9 @@ Font
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+
 /* latin */
+
 @font-face {
     font-family: 'Roboto';
     font-style: normal;
@@ -28,7 +35,9 @@ Font
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+
 /* latin */
+
 @font-face {
     font-family: 'Roboto';
     font-style: normal;
@@ -37,10 +46,12 @@ Font
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+
 /**********************************
 font-family: 'Junge', serif;
 font-family: 'Roboto', sans-serif;
 **********************************/
+
 
 /**********************************************************************
 Keyframes
@@ -50,37 +61,57 @@ Keyframes
     from {
         padding-left: 0;
     }
-
     to {
         padding-left: 0.8rem;
     }
 }
 
 @keyframes fadeOut {
-    0% { width: 100%; opacity: 1; }
-    100% { width: 0; opacity: 0; }
+    0% {
+        width: 100%;
+        opacity: 1;
+    }
+    100% {
+        width: 0;
+        opacity: 0;
+    }
 }
 
 @keyframes fadeIn {
-    0% { height: 0; opacity: 0; }
-    100% { height: 100%; opacity: 1; }
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+    100% {
+        height: 100%;
+        opacity: 1;
+    }
 }
+
 
 /**********************************************************************
 Global styling
 **********************************************************************/
+
 html {
     font-size: 15px;
 }
 
-p, h1, h2, h3, h4, h5, h6, a, li {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+li {
     font-family: 'Roboto', sans-serif;
 }
 
 p {
     text-align: justify;
 }
-
 
 blockquote {
     margin: 1rem auto;
@@ -102,7 +133,7 @@ blockquote p {
 .container-md {
     max-width: 980px;
     margin: auto;
-    position:relative;
+    position: relative;
 }
 
 .bold {
@@ -163,7 +194,8 @@ blockquote p {
     background-color: #F8D7DA !important;
 }
 
-.alert, .success {
+.alert,
+.success {
     padding: 0.4rem;
     margin-bottom: 1rem;
     border-radius: 0.2rem;
@@ -181,7 +213,8 @@ blockquote p {
     border-radius: 0.2rem;
 }
 
-.form-alert-success {
+.form-alert-success,
+.success {
     background-color: #D4EDDA;
     color: #155724;
 }
@@ -191,7 +224,8 @@ blockquote p {
     color: #856404;
 }
 
-.informative, .note {
+.informative,
+.note {
     margin: 2rem 0;
     padding: 1rem;
     border-radius: 0.8rem;
@@ -228,7 +262,7 @@ hr {
     cursor: pointer;
 }
 
-.jump-arrow img  {
+.jump-arrow img {
     width: 100%;
 }
 
@@ -242,7 +276,7 @@ hr {
     left: 2px;
 }
 
-.button-href{
+.button-href {
     margin: 2rem 0;
     width: 12rem;
     transform: scale(1);
@@ -250,7 +284,7 @@ hr {
     transition: transform 200ms ease-in;
 }
 
-.button-href a{
+.button-href a {
     background-color: #cce5ff !important;
     color: #004085 !important;
     padding: .75rem 1.25rem !important;
@@ -269,6 +303,7 @@ hr {
     margin-right: auto;
 }
 
+
 /**********************************************************************
 Navigation
 **********************************************************************/
@@ -276,7 +311,7 @@ Navigation
 #navigation {
     border-bottom: solid 0.1rem #F2F2F2;
     position: fixed;
-    top:0;
+    top: 0;
     z-index: 2;
     background-color: #fff;
     margin: 0 auto;
@@ -292,8 +327,8 @@ Navigation
 }
 
 .logo-wrap {
-    display:flex;
-    justify-content:space-between;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -305,14 +340,15 @@ Navigation
     background-color: inherit;
     padding: 0.5rem 0;
     margin: 0 1rem;
-    -webkit-transition: background-color 0.5s, border-radius 0.5s; /* Safari */
+    -webkit-transition: background-color 0.5s, border-radius 0.5s;
+    /* Safari */
     transition: background-color 0.5s, border-radius 0.5s;
 }
 
 .nav-container li:hover {
     background-color: #F2F2F2;
     border-radius: 0.15rem;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 #navigation a {
@@ -358,47 +394,37 @@ Navigation
 }
 
 @media only screen and (max-width: 920px) {
-
     .logo {
         max-width: 300px;
     }
-
     .nav-container li {
         font-size: 1rem;
     }
 }
 
 @media only screen and (max-width: 720px) {
-
     .logo {
         padding: 3rem 0;
     }
-
     .nav-wrap {
         display: flex;
         width: 100%;
     }
-
     .logo-wrap {
         order: 1;
     }
-
-
     .main-information {
         padding-top: 300px !important;
     }
-
     #navigation .button {
         display: flex;
         align-items: center;
         justify-content: flex-end;
     }
-
     .nav-container {
         flex-direction: column;
         justify-content: center;
     }
-
     .nav-ul {
         display: flex;
         -webkit-box-orient: vertical;
@@ -410,19 +436,16 @@ Navigation
         transition: max-height 400ms;
         max-height: 80vh;
     }
-
     .nav-ul {
-        -ms-overflow-style: none;  // IE 10+
-        overflow: -moz-scrollbars-none;  // Firefox
+        -ms-overflow-style: none;
+        overflow: -moz-scrollbars-none;
     }
     .nav-ul::-webkit-scrollbar {
-        display: none;  // Safari and Chrome
+        display: none;
     }
-
     nav {
         width: 100%;
     }
-
     .nav-ul li {
         display: flex;
         justify-content: center;
@@ -430,12 +453,11 @@ Navigation
         width: 100%;
         margin: 0 auto;
     }
-
     .hide-ul {
         max-height: 0;
     }
-
 }
+
 
 /**********************************************************************
 Footer section
@@ -446,7 +468,6 @@ footer {
     background-color: #004085;
     color: #ffffff;
     padding: 5rem 2rem;
-
 }
 
 .footer {
@@ -457,7 +478,8 @@ footer {
     margin: 0 auto;
 }
 
-.footer a, footer p {
+.footer a,
+footer p {
     color: #7EB3FF;
     text-decoration: none;
     padding: 1rem 0;
@@ -472,11 +494,13 @@ footer {
     footer {
         font-size: 0.8rem;
     }
-
 }
+
+
 /**********************************************************************
-Landing page section
+Home page
 **********************************************************************/
+
 
 /**********************************************************************
 Header section
@@ -486,7 +510,7 @@ header {
     position: relative;
     padding-top: 200px;
     height: 60rem;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     background-color: #343a40;
@@ -496,11 +520,10 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     color: #ffffff !important;
-
 }
 
 .header-wrap {
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -512,13 +535,14 @@ header {
     background-color: rgba(33, 150, 243, 0.4);
 }
 
-.header-wrap h1, .header-wrap h3 {
+.header-wrap h1,
+.header-wrap h3 {
     width: 100%;
 }
 
 .overlay {
     position: absolute;
-    background-color: #2196f321;
+    background-color: rgba(33, 150, 243, 0.1);
     height: 100%;
     width: 100%;
     top: 0;
@@ -528,7 +552,6 @@ header {
 .content-elem-img a {
     text-decoration: none;
     background: transparent !important;
-
 }
 
 .content-elem {
@@ -545,6 +568,11 @@ header {
     padding: 1rem 2rem;
 }
 
+.content-elem-text ul {
+    padding-left: 1rem;
+    text-align: left;
+}
+
 .content-elem-text p {
     padding: 0.5rem 0;
 }
@@ -559,12 +587,11 @@ header {
     width: 20rem;
     height: auto;
     transform: scale(1);
-    box-shadow: 0 0 0 rgba(0,0,0,0.15);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.15);
     transition: all .2s ease-in-out;
 }
 
 .content-elem-img img:hover {
-    shadow: 0 5px 15px rgba(0,0,0,0.3);
     transform: scale(1.1);
 }
 
@@ -580,35 +607,27 @@ header {
 }
 
 @media only screen and (max-width: 980px) {
-
     .content-elem-img img {
         width: 10rem;
     }
-
     .content-elem-text h2 {
         font-size: 2rem;
     }
-
     .header-wrap {
         font-size: 20px;
     }
-
 }
 
 @media only screen and (max-width: 720px) {
-
     .content-elem-img img {
         width: 10rem;
     }
-
     .content-elem-text h2 {
         font-size: 2rem;
     }
-
     .content-elem-text p {
         text-align: center;
     }
-
     .content-elem {
         flex-direction: column;
         text-align: center;
@@ -619,7 +638,6 @@ header {
     .header-wrap {
         font-size: 15px;
     }
-
     header {
         height: 25rem;
     }
@@ -642,8 +660,8 @@ header {
         padding-top: 100px;
         margin-top: 200px;
     }
-
 }
+
 
 /**********************************************************************
 Practice page
@@ -663,7 +681,7 @@ Quiz Button section
 #welcome button {
     width: 8rem;
     height: 3rem;
-    padding:  0.5rem 1rem;
+    padding: 0.5rem 1rem;
     border-radius: 0.35rem;
     background-color: #FFCB71;
     margin: 1rem;
@@ -696,6 +714,7 @@ Quiz Button section
     }
 }
 
+
 /**********************************************************************
 Quiz section
 **********************************************************************/
@@ -703,28 +722,40 @@ Quiz section
 #quiz {
     font-family: 'Junge', serif;
     background-color: #F2F2F2;
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 3; /* Sit on top */
-    padding-top: 0px; /* Location of the box */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 3;
+    /* Sit on top */
+    padding-top: 0px;
+    /* Location of the box */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
 }
+
 
 /* Modal Content/Box */
+
 .quiz-container {
     background-color: #FEFEFE;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto;
+    /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-
 }
 
+
 /* The Close Button */
+
 .close {
     display: flex;
     justify-content: center;
@@ -740,10 +771,18 @@ Quiz section
 }
 
 @keyframes semirotate {
-    0% { transform: rotate(0deg) }
-    35% { transform: rotate(45deg) }
-    65% { transform: rotate(-45deg) }
-    100% { transform: rotate(0deg) }
+    0% {
+        transform: rotate(0deg)
+    }
+    35% {
+        transform: rotate(45deg)
+    }
+    65% {
+        transform: rotate(-45deg)
+    }
+    100% {
+        transform: rotate(0deg)
+    }
 }
 
 .close:hover {
@@ -752,7 +791,9 @@ Quiz section
     animation-iteration-count: 1;
 }
 
-.answer, .question, .info {
+.answer,
+.question,
+.info {
     padding: 0.5rem;
     border-radius: 0.35rem;
     margin: 0.4rem 0.2rem;
@@ -789,11 +830,11 @@ Quiz section
     text-align: justify;
 }
 
- .answer:nth-child(2n+0){
+.answer:nth-child(2n+0) {
     background-color: #E2E3E5;
 }
 
-.answer:nth-child(2n+1){
+.answer:nth-child(2n+1) {
     background-color: #D6D8D9;
 }
 
@@ -805,7 +846,8 @@ Quiz section
     padding: 1rem 0;
 }
 
-#final-score h3, #final-score p {
+#final-score h3,
+#final-score p {
     padding: 0.5rem 0;
 }
 
@@ -823,15 +865,17 @@ Quiz section
     transition: 0.3s ease-in;
 }
 
-.submit-btn:active span, .submit-btn:hover  span{
+.submit-btn:active span,
+.submit-btn:hover span {
     animation: 0;
 }
+
 .submit-btn:hover {
     cursor: pointer;
     letter-spacing: 0.1rem;
 }
 
-.submit-btn:active{
+.submit-btn:active {
     letter-spacing: -0.05rem;
 }
 
@@ -846,6 +890,14 @@ Quiz section
     display: none;
 }
 
+.fb-wrap {
+    padding: 0 1rem;
+}
+
+#facebook-comment {
+    margin: 3rem auto;
+}
+
 
 /**********************************************************************
 Resources Page
@@ -858,6 +910,7 @@ Resources Page
 .main-information {
     padding-top: 200px;
 }
+
 
 /**********************************************************************
 Content list section
@@ -884,12 +937,24 @@ Content list section
 }
 
 @keyframes tease {
-    0% {transform: scale(1)}
-    10% {transform: scale(1.4)}
-    30% {transform: scale(1)}
-    40% {left: 2px}
-    70% {left: 6px}
-    100% {left: 2px}
+    0% {
+        transform: scale(1)
+    }
+    10% {
+        transform: scale(1.4)
+    }
+    30% {
+        transform: scale(1)
+    }
+    40% {
+        left: 2px
+    }
+    70% {
+        left: 6px
+    }
+    100% {
+        left: 2px
+    }
 }
 
 #bookmark {
@@ -936,7 +1001,10 @@ Content list section
     font-weight: bold;
 }
 
-#close-list:hover, #close-list:active, #top:hover, #top:active  {
+#close-list:hover,
+#close-list:active,
+#top:hover,
+#top:active {
     transition: 0.5s;
     color: #ffffff;
 }
@@ -957,41 +1025,47 @@ Content list section
     padding-bottom: 3rem;
 }
 
-.content-list ul{
+.content-list ul {
     padding: 1rem;
 }
 
-.content-list li{
+.content-list li {
     padding: 0.2rem 0;
 }
 
 @media screen and (max-height: 450px) {
-    .content-list {padding-top: 1px;}
+    .content-list {
+        padding-top: 1px;
+    }
 }
 
 
 /**********************************************************************
 Main information section
 **********************************************************************/
+
 .page-content {
     margin: 1.5rem;
-
 }
 
-.page-content li, .intro li {
+.page-content li,
+.intro li,
+.content-elem-text li {
     list-style-type: square;
     padding: 0.5rem 0;
 }
 
-.page-content ul, .intro ul {
-    padding: 0 0 0 2rem;
+.page-content ul,
+.intro ul {
+    padding: 0 0 0 1rem;
 }
 
 .page-content h1 {
     padding: 2rem 0;
 }
 
-.page-content h3, .page-content p {
+.page-content h3,
+.page-content p {
     padding: 1rem 0;
 }
 
@@ -999,7 +1073,11 @@ Main information section
     padding-top: 1.35rem;
 }
 
-.page-content a, .intro a, .about-us a, .terms a, .content-presentation a {
+.page-content a,
+.intro a,
+.about-us a,
+.terms a,
+.content-presentation a {
     background: #7EB3FF;
     color: #ffffff;
     cursor: pointer;
@@ -1007,10 +1085,13 @@ Main information section
     transition: ease-in 0.3s;
     border-radius: 0.2rem;
     padding: 0 0.1rem;
-
 }
 
-.page-content a:hover, .intro a:hover, .about-us a:hover, .terms a:hover,  .content-presentation a:hover {
+.page-content a:hover,
+.intro a:hover,
+.about-us a:hover,
+.terms a:hover,
+.content-presentation a:hover {
     color: #24345C;
 }
 
@@ -1066,7 +1147,7 @@ Main information section
 .chapter-button {
     padding: 2rem;
     margin: 2rem;
-    color:  #7EB3FF;
+    color: #7EB3FF;
     background: #004085;
     opacity: 1;
     transition: opacity 0.25s;
@@ -1074,7 +1155,8 @@ Main information section
     text-align: center;
 }
 
-.chapter-button:hover, .new-tab:hover {
+.chapter-button:hover,
+.new-tab:hover {
     opacity: 0.9;
     cursor: pointer;
 }
@@ -1100,7 +1182,8 @@ table {
     color: #3c763d;
 }
 
-td, th {
+td,
+th {
     border: 1px solid #d6e9c6;
     text-align: left;
     padding: 8px;
@@ -1110,7 +1193,8 @@ tr:nth-child(even) {
     background-color: #dff0d8;
 }
 
-.anchor:hover, .anchor:active {
+.anchor:hover,
+.anchor:active {
     transform: scale(1.05);
     font-weight: bold;
     border-right: 0.2rem solid #004085;
@@ -1148,13 +1232,15 @@ tr:nth-child(even) {
 
 @media only screen and (max-width: 400px) {
     .chapter-number {
-       font-size: 0.6rem;
+        font-size: 0.6rem;
     }
 }
+
 
 /**********************************************************************
 About us Page
 **********************************************************************/
+
 
 /**********************************************************************
 about-us section
@@ -1197,7 +1283,9 @@ about-us section
     margin-bottom: 0.5rem;
 }
 
-.about-us-form input[type=text], .about-us-form input[type=email], .about-us-form textarea {
+.about-us-form input[type=text],
+.about-us-form input[type=email],
+.about-us-form textarea {
     display: block;
     max-width: 100%;
     padding: .5rem .75rem;
@@ -1205,15 +1293,16 @@ about-us section
     line-height: 1.25;
     color: #464a4c;
     background-color: #fff;
-    border: 1px solid rgba(0,0,0,.15);
+    border: 1px solid rgba(0, 0, 0, .15);
     border-radius: .25rem;
 }
 
-#name, #email {
+#name,
+#email {
     height: 2rem;
     border-radius: 0.3rem;
 }
-s
+
 .small {
     font-size: 0.8rem;
     font-style: oblique;
@@ -1241,7 +1330,6 @@ s
     font-size: 0.8rem;
 }
 
-
 @media only screen and (max-width: 720px) {
     .about-us {
         padding-top: 300px;
@@ -1249,24 +1337,25 @@ s
 }
 
 
-
 /**********************************************************************
 Terms and conditions Page
 **********************************************************************/
 
+
 /**********************************************************************
 terms section
 **********************************************************************/
+
 .terms .container {
     max-width: 980px;
 }
 
 .terms {
     padding: 200px 1rem 2rem 1rem;
-
 }
 
-.terms h2, .terms p {
+.terms h2,
+.terms p {
     padding: 1rem 0;
 }
 
@@ -1275,6 +1364,3 @@ terms section
         padding-top: 300px;
     }
 }
-
-
-
