@@ -276,23 +276,30 @@ hr {
     left: 2px;
 }
 
-.button-href {
-    margin: 2rem 0;
-    width: 12rem;
+.button-href-link {
+    margin: 4rem auto !important;
+}
+
+.button-href,
+.button-href-link {
+    margin: 2rem auto;
+    width: 20rem;
+    text-align: center;
     transform: scale(1);
     -moz-transform: scale(1);
     transition: transform 200ms ease-in;
 }
 
-.button-href a {
-    background-color: #cce5ff !important;
-    color: #004085 !important;
-    padding: .75rem 1.25rem !important;
-    border: 1px solid #b8daff !important;
+.button-href a,
+.button-href-link a {
+    background-color: #c91a69 !important;
+    color: #ffffff !important;
+    padding: .75rem 5rem !important;
     border-radius: .25rem !important;
 }
 
-.button-href:hover {
+.button-href:hover,
+.button-href-link:hover {
     transform: scale(1.1);
     -moz-transform: scale(1.1);
 }
@@ -301,6 +308,19 @@ hr {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.facebook-like-wrap {
+    margin: 5rem 0 0 0;
+}
+
+.facebook-page-wrap {
+    margin: 3rem auto;
+    max-width: 340px;
+}
+
+#facebook-page {
+    text-align: center;
 }
 
 
@@ -404,7 +424,7 @@ Navigation
 
 @media only screen and (max-width: 720px) {
     .logo {
-        padding: 3rem 0;
+        padding: 1rem 0;
     }
     .nav-wrap {
         display: flex;
@@ -522,15 +542,22 @@ header {
     color: #ffffff !important;
 }
 
+#practice-header {
+    height: 40rem;
+    background-image: url("../img/london.jpg");
+    background-size: cover;
+}
+
 .header-wrap {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: -10rem;
     z-index: 1;
     font-size: 25px;
     text-align: center;
-    padding: 0 2rem;
+    padding: 0 1.4rem;
     width: 100%;
     background-color: rgba(33, 150, 243, 0.4);
 }
@@ -538,6 +565,34 @@ header {
 .header-wrap h1,
 .header-wrap h3 {
     width: 100%;
+    margin: 0.5rem 0;
+}
+
+#go-to-practice {
+    text-decoration: none;
+    padding: 0.5rem 0.5rem;
+    margin: 3rem 1rem;
+    color: #ffffff;
+    font-size: 1.5rem;
+    background-color: #c91a69;
+    border-radius: 0.8rem;
+    width: 13rem;
+    transform: scale(1);
+    transition: 0.2s;
+}
+
+#go-to-practice:hover {
+    cursor: pointer;
+    transform: scale(0.98);
+}
+
+.get-started-text {
+    float: left;
+}
+
+.get-started-arrow {
+    float: right;
+    line-height: 2.2rem;
 }
 
 .overlay {
@@ -548,6 +603,45 @@ header {
     top: 0;
     left: 0;
 }
+
+
+/**********************************************************************
+sample quiz section
+**********************************************************************/
+
+#sample .quiz-container {
+    margin: 4rem auto;
+    border: none;
+}
+
+#sample-intro {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 20px;
+    background: #c91a69;
+    color: #ffffff;
+}
+
+#sample-intro h1,
+#sample-intro h2 {
+    margin: 2rem 0;
+}
+
+#finished-btn {
+    margin: 2rem 0;
+    background: #c91a69;
+    color: #ffffff;
+}
+
+#sample-anchor {
+    margin: 2rem 0;
+    color: #004085;
+}
+
+
+/**********************************************************************
+Content presentation section
+**********************************************************************/
 
 .content-elem-img a {
     text-decoration: none;
@@ -565,7 +659,7 @@ header {
 }
 
 .content-elem-text {
-    padding: 1rem 2rem;
+    margin: 1rem 2rem;
 }
 
 .content-elem-text ul {
@@ -581,10 +675,11 @@ header {
     color: #004085;
     font-size: 3rem;
     font-weight: bolder;
+    padding: 2rem 0;
 }
 
 .content-elem-img img {
-    width: 20rem;
+    width: 30rem;
     height: auto;
     transform: scale(1);
     box-shadow: 0 0 0 rgba(0, 0, 0, 0.15);
@@ -602,13 +697,13 @@ header {
 
 @media only screen and (max-width: 1200px) {
     .content-elem-img img {
-        width: 15rem;
+        width: 25rem;
     }
 }
 
 @media only screen and (max-width: 980px) {
     .content-elem-img img {
-        width: 10rem;
+        width: 20rem;
     }
     .content-elem-text h2 {
         font-size: 2rem;
@@ -620,7 +715,7 @@ header {
 
 @media only screen and (max-width: 720px) {
     .content-elem-img img {
-        width: 10rem;
+        width: 20rem;
     }
     .content-elem-text h2 {
         font-size: 2rem;
@@ -635,17 +730,14 @@ header {
 }
 
 @media only screen and (max-width: 650px) {
-    .header-wrap {
-        font-size: 15px;
-    }
     header {
-        height: 25rem;
+        height: 40rem;
     }
 }
 
 @media only screen and (max-width: 480px) {
-    .header-wrap {
-        font-size: 10px;
+    .content-elem-img img {
+        width: 15rem;
     }
 }
 
@@ -674,7 +766,7 @@ Quiz Button section
 
 #welcome {
     width: 100%;
-    padding-top: 200px;
+    padding-top: 4rem;
     background: #7EB3FF url("../img/texture.png");
 }
 
@@ -694,6 +786,10 @@ Quiz Button section
     cursor: pointer;
 }
 
+#welcome .facebook-like-wrap {
+    border-radius: 0;
+}
+
 .quiz-list ul {
     display: flex;
     flex-wrap: wrap;
@@ -706,12 +802,6 @@ Quiz Button section
 
 .intro {
     padding: 0 3rem;
-}
-
-@media only screen and (max-width: 720px) {
-    #welcome {
-        padding-top: 300px;
-    }
 }
 
 
@@ -1077,7 +1167,9 @@ Main information section
 .intro a,
 .about-us a,
 .terms a,
-.content-presentation a {
+.content-presentation a,
+#sample a,
+#cookie-policy a {
     background: #7EB3FF;
     color: #ffffff;
     cursor: pointer;
@@ -1091,7 +1183,9 @@ Main information section
 .intro a:hover,
 .about-us a:hover,
 .terms a:hover,
-.content-presentation a:hover {
+.content-presentation a:hover,
+#sample a:hover,
+#cookie-policy a:hover {
     color: #24345C;
 }
 

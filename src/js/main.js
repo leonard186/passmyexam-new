@@ -147,11 +147,11 @@ var quiz1 = [
     //Question 16
     new Quiz(
         'The National Citizen Service programme is: ',
-        'Compulsory for 16 and 17-year-olds to join',
-        'Optional for 16 and 17-year-olds to join',
+        'Compulsory for 16 and 17 year-olds to join',
+        'Optional for 16 and 17 year-olds to join',
         'An opportunity to enjoy outdoor activities, develop skills and take part in a community project',
         'Available for any age group', [0, 1, 1, 0],
-        'The National Citizen Service programme, which gives 16- and 17-year-olds the opportunity to enjoy outdoor activities, develop their skills and take part in a community project. Therefore, it is optional.'
+        'The National Citizen Service programme, which gives 16- and 17 year-olds the opportunity to enjoy outdoor activities, develop their skills and take part in a community project. Therefore, it is optional.'
     ),
     //Question 17
     new Quiz(
@@ -1849,7 +1849,7 @@ var quiz9 = [
         'England',
         'Northern Ireland',
         'Scotland', [1, 0, 0, 0],
-        'Swansea it is located in Wales'
+        'Swansea is located in Wales'
     ),
     //Question 11
     new Quiz(

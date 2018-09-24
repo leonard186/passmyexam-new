@@ -34,6 +34,8 @@
 
             gtag('config', 'UA-125988398-1');
         </script>
+    <!-- Cookie Policy-->
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d91d4273-d6cc-48f3-a599-71cb7b6db1d9" type="text/javascript" async></script>
 
     </head>
 
@@ -81,14 +83,14 @@
 
                     <div class="about-us-info">
                         <p>
-                            Our aim is to help people prepare for the Life in the UK test. <a href="passmyexam.co.uk">passmyexam.co.uk</a>
+                            Our aim is to help people prepare for the Life in the UK test. <a href="https://passmyexam.co.uk">passmyexam.co.uk</a>
                             is as a free source to learn and practice for the official exam.
                         </p>
                     </div>
 
                     <div class="about-us-info">
                         <p>
-                            We try to keep all the information up to date so anyone using <a href="passmyexam.co.uk">passmyexam.co.uk</a>
+                            We try to keep all the information up to date so anyone using <a href="https://passmyexam.co.uk">passmyexam.co.uk</a>
                             can take the exam with confidence.
                         </p>
                     </div>

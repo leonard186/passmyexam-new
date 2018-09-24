@@ -19,12 +19,14 @@
     <meta name="msapplication-config" content="./src/img/icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <!-- Facebook metadata-->
+    <!-- Facebook metadata-->
+    <meta property="og:url" content="https://passmyexam.co.uk/">
+    <meta property="og:type" content="website" />
     <meta property="og:image:height" content="488">
     <meta property="og:image:width" content="931">
     <meta property="og:description" content="Connect with people who share the same goal of getting their British citizenship!">
     <meta property="og:title" content="Life in the UK Test Group">
     <meta property="og:image" content="https://passmyexam.co.uk/src/img/og-image.jpg">
-    <meta property="og:url" content="passmyexam.co.uk">
     <!-- Reset -->
     <link rel="stylesheet" href="./src/css/reset.css" type="text/css">
     <!-- Custom stylesheet -->
@@ -41,7 +43,8 @@
 
         gtag('config', 'UA-125988398-1');
     </script>
-
+    <!-- Cookie Policy-->
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d91d4273-d6cc-48f3-a599-71cb7b6db1d9" type="text/javascript" async></script>
 </head>
 
 <body>
@@ -82,15 +85,128 @@
     <header>
         <div class="overlay"></div>
         <div class="header-wrap">
-            <h1>Welcome to passmyexam.co.uk</h1>
-            <h3>Learn and practice with us so you can pass the<br> Life in the UK exam!</h3>
+            <h1>Welcome to passmyexam .co.uk</h1>
+            <h3>Practice for FREE and get ready to pass the Life in the UK test</h3>
+            <a href="./src/pages/practice.html" id="go-to-practice">
+                <span class="get-started-text">Get started</span>
+                <span class="get-started-arrow">&rang;</span>
+            </a>
         </div>
     </header>
+
+    <!-- sample quiz section -->
+
+    <div id="sample-intro">
+        <h1>Are you ready for the official exam?</h2>
+            <h2>See the kind of questions you will be asked in the Life in the UK test</h2>
+    </div>
+
+    <div id="sample">
+
+        <div class="container quiz-container">
+
+            <h1 id="sample-anchor">Try the sample test</h1>
+
+            <!-- Finished quiz layout -->
+            <div id="finished">
+                <div id="final-score"></div>
+                <button class="submit-btn" id="finished-btn">Go to practice page</button>
+            </div>
+
+            <!-- Quiz layout -->
+            <div id="quiz-layout">
+                <div class="quiz-info">
+                    <div id="quiz-name">Sample test</div>
+                    <div id="quiz-count"></div>
+                    <div id="correct-count" class="green"></div>
+                    <div id="count-down"></div>
+                </div>
+
+                <hr>
+
+                <div class="question" id="question">
+                    Question placeholder ...?
+                </div>
+
+                <div id="answers">
+                    <div class="answer" id="answer1">
+                        <label>
+                                    <input type="checkbox" value="">
+                                    <span id="a1">placeholder...1</span>
+                                </label>
+                    </div>
+
+                    <div class="answer" id="answer2">
+                        <label>
+                                    <input type="checkbox" value="">
+                                    <span id="a2">placeholder...2</span>
+                                </label>
+                    </div>
+
+                    <div class="answer" id="answer3">
+                        <label>
+                                    <input type="checkbox" value="">
+                                    <span id="a3">placeholder...3</span>
+                                </label>
+                    </div>
+
+                    <div class="answer" id="answer4">
+                        <label>
+                                    <input type="checkbox" value="">
+                                    <span id="a4">placeholder...4</span>
+                                </label>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="info" id="info">
+
+                </div>
+                <button class="submit-btn show" id="submit-btn" type="submit">Check answer</button>
+                <button class="submit-btn hide" id="submit-btn-next" type="submit">Continue <span class="arrow">>></span> </button>
+            </div>
+
+            <div id="facebook-like" class="facebook-like-wrap">
+                <iframe class="centre" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpg%2FnowBritish%2Fposts%2F%3Fref%3Dpage_internal&width=450&layout=standard&action=recommend&size=large&show_faces=true&share=true&height=80&appId=1153340264838771"
+                    width="100%" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Content presentation section -->
 
     <section class="content-presentation">
         <div class="container">
+
+            <div class="practice content-elem">
+
+                <div class="content-elem-img">
+                    <a href="./src/pages/practice.html"><img src="./src/img/student.svg" alt="illustration of a student"></a>
+                </div>
+
+                <div class="content-elem-text">
+                    <h2>Life in the UK test</h2>
+                    <p>
+                        All questions in the mock exams are based on the official 3rd edition handbook ‘Life in the United Kingdom: A guide for new residents’.
+                    </p>
+                    <p>
+                        There are 15 sample practice tests containing 24 questions each with a 45 minute countdown timer, just like in the real official test.
+                    </p>
+
+                    <p>Each question is provided with an explanation to help memorize and understand the correct answers.</p>
+
+                    <p>The Life in the UK book should be read prior to completing the practice tests.</p>
+
+                    <div class="button-href-link centre">
+                        <a href="./src/pages/practice.html">Practice now</a>
+                    </div>
+
+                </div>
+
+            </div>
+
             <div class="study content-elem">
 
                 <div class="content-elem-img">
@@ -117,35 +233,8 @@
                         </ul>
                     </div>
 
-                    <div class="button-href centre">
+                    <div class="button-href-link centre">
                         <a href="./src/pages/chapter/chapter1.html">Online Book</a>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="practice content-elem">
-
-                <div class="content-elem-img">
-                    <a href="./src/pages/practice.html"><img src="./src/img/student.svg" alt="illustration of a student"></a>
-                </div>
-
-                <div class="content-elem-text">
-                    <h2>Life in the UK test</h2>
-                    <p>
-                        All questions in the mock exams are based on the official 3rd edition handbook ‘Life in the United Kingdom: A guide for new residents’.
-                    </p>
-                    <p>
-                        There are 15 sample practice tests containing 24 questions each with a 45 minute countdown timer, just like in the real official test.
-                    </p>
-
-                    <p>Each question is provided with an explanation to help memorize and understand the correct answers.</p>
-
-                    <p>The Life in the UK book should be read prior to completing the practice tests.</p>
-
-                    <div class="button-href centre">
-                        <a href="./src/pages/practice.html">Practice now</a>
                     </div>
 
                 </div>
@@ -169,12 +258,26 @@
                             a message</a>.
                     </p>
 
-                    <div class="button-href centre">
+                    <div class="button-href-link centre">
                         <a href="./src/pages/about.php">Send message</a>
                     </div>
 
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <section id="facebook-page">
+
+        <div class="container">
+            <div class="content-elem-text centre">
+                <h2>Check out our facebook page!</h2>
+            </div>
+            <div class="facebook-page-wrap centre">
+
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FnowBritish%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=false&hide_cover=false&show_facepile=true&appId=1153340264838771" width="100%"
+                    height="500px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
             </div>
         </div>
     </section>
@@ -193,6 +296,8 @@
         </div>
     </footer>
     <script src="./src/js/navigation.js"></script>
+    <script src="./src/js/sample-test.js"></script>
+
 </body>
 
 </html>

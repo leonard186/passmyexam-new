@@ -17,12 +17,13 @@
     <meta name="msapplication-config" content="../img/icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <!-- Facebook metadata-->
+    <meta property="og:url" content="https://passmyexam.co.uk/">
+    <meta property="og:type" content="website" />
     <meta property="og:image:height" content="488">
     <meta property="og:image:width" content="931">
     <meta property="og:description" content="Connect with people who share the same goal of getting their British citizenship!">
     <meta property="og:title" content="Life in the UK Test Group">
     <meta property="og:image" content="https://passmyexam.co.uk/src/img/og-image.jpg">
-    <meta property="og:url" content="passmyexam.co.uk">
     <!-- Reset -->
     <link rel="stylesheet" href="../css/reset.css" type="text/css">
     <!-- Custom stylesheet -->
@@ -39,6 +40,8 @@
 
         gtag('config', 'UA-125988398-1');
     </script>
+    <!-- Cookie Policy-->
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="d91d4273-d6cc-48f3-a599-71cb7b6db1d9" type="text/javascript" async></script>
 
 </head>
 
@@ -75,6 +78,22 @@
         </div>
     </div>
 
+    <!-- Header section -->
+
+    <header id="practice-header">
+        <div class="overlay"></div>
+        <div class="header-wrap">
+
+            <h1>Welcome to the practice page!</h1>
+            <h2>Get started with practicing</h2>
+            <h2>Ask any questions in the discussions area</h2>
+            <a href="#quiz-list" id="go-to-practice">
+                <span class="get-started-text">Start practicing</span>
+                <span class="get-started-arrow">&rang;</span>
+            </a>
+        </div>
+    </header>
+
     <!-- Main Content -->
 
     <!-- Quiz button section -->
@@ -110,7 +129,7 @@
 
             </div>
 
-            <div class="quiz-list">
+            <div class="quiz-list" id="quiz-list">
                 <ul>
                     <li><button class="btn" id="btn-1">Exam 1</button></li>
                     <li><button class="btn" id="btn-2">Exam 2</button></li>
@@ -129,6 +148,14 @@
                     <li><button class="btn" id="btn-15">Exam 15</button></li>
                 </ul>
             </div>
+
+            <!-- Facbook recommend and share plugin -->
+
+            <div class="facebook-like-wrap informative centre">
+                <iframe class="centre" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpg%2FnowBritish%2Fposts%2F%3Fref%3Dpage_internal&width=450&layout=standard&action=recommend&size=large&show_faces=true&share=true&height=80&appId=1153340264838771"
+                    width="100%" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            </div>
+
         </div>
     </div>
 
