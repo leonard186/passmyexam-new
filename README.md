@@ -1,11 +1,11 @@
 # PASSMYEXAM
 
 This fully functioning multi page website helps people train for the Life In The UK exam by offering guidance, 
-learning material and 15 quizzes to train.
+learning material and 15 quizzes to train from.
 
 
 
-## [Live demo](https://passmyexam.co.uk/index.html)
+## [Demo Link](https://passmyexam.co.uk/src/pages/practice.html)
 
 
 
@@ -21,7 +21,7 @@ sectioned in 5 main parts:
 * [Online book](https://passmyexam.co.uk/src/pages/chapter/chapter1.html) - Online book to learn from
 
 
-Connected with facebook social plugins and google analytics. 
+Connected to facebook social plugins and google analytics. 
 
 ## Tech used
 
