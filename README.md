@@ -1,6 +1,6 @@
 # PASSMYEXAM
 
-This fully functioning multi page website helps people train for the Life In The UK exam by offering guidance, 
+This fully functional multi page website helps people train for the Life In The UK exam by offering guidance, 
 learning material and 15 quizzes to train from.
 
 
