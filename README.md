@@ -5,7 +5,8 @@ learning material and 15 quizzes to train from.
 
 
 
-## [Demo Link](https://passmyexam.co.uk/src/pages/practice.html)
+## Live Demo
+[https://passmyexam.co.uk/index.html](https://passmyexam.co.uk/src/pages/practice.html)
 
 
 
