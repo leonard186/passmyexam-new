@@ -30,7 +30,7 @@ Connected to facebook social plugins and google analytics.
 * CSS
 * Javascript ES5
 * PHP
-* Responsive design for mobiles and tablets
+* Responsive layout
 
 
 ## Acknowledgments
